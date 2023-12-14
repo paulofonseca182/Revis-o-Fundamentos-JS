@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    const body = document.querySelector('body');
+    console.log(body);
+    const createh1 = document.createElement('h1');
+    body.appendChild(createh1);
+    createh1.className = 'title';
+    const title = document.getElementsByClassName('title')[0];
+    title.innerText = 'TrybeTrip - Agência de Viagens';
+
+    const creatMain = document.createElement('main');
+    body.appendChild(creatMain);
+    creatMain.className = 'main-content';
+
+    const createSection1 = document.createElement('section');
+    createSection1.className = 'center-content'
+    creatMain.appendChild(createSection1)
+
+    const createP = document.createElement('p')
+    createP.innerText = 'Coloque algum texto'
+    createSection1.appendChild(createP)
+
+    const createSection2 = document.createElement('section');
+    createSection2.className = 'left-content'
+    creatMain.appendChild(createSection2)
+
+
+    const createSection3 = document.createElement('section');
+    createSection3.className = 'right-content';
+    creatMain.appendChild(createSection3);
+
+    const creatImg = document.createElement('img');
+    creatImg.src = 'https://picsum.photos/200';
+    creatImg.className = 'small-image';
+    createSection2.appendChild(creatImg);
+
+    const listaOrdenada = document.createElement('ol');
+    createSection3.appendChild(listaOrdenada);
+    const lista1 = document.createElement('li');
+    listaOrdenada.appendChild(lista1);
+    lista1.innerText = 'Um'
+    const lista2 = document.createElement('li');
+    listaOrdenada.appendChild(lista2);
+    lista2.innerText = 'Dois'
+    const lista3 = document.createElement('li');
+    listaOrdenada.appendChild(lista3);
+    lista3.innerText = 'Tres'
+    const lista4 = document.createElement('li');
+    listaOrdenada.appendChild(lista4);
+    lista4.innerText = 'Quatro'
+    const lista5 = document.createElement('li');
+    listaOrdenada.appendChild(lista5);
+    lista5.innerText = 'Cinco'
+    const lista6 = document.createElement('li');
+    listaOrdenada.appendChild(lista6);
+    lista6.innerText = 'Seis'
+    const lista7 = document.createElement('li');
+    listaOrdenada.appendChild(lista7);
+    lista7.innerText = 'Sete'
+    const lista8 = document.createElement('li');
+    listaOrdenada.appendChild(lista8);
+    lista8.innerText = 'Oito'
+    const lista9 = document.createElement('li');
+    listaOrdenada.appendChild(lista9);
+    lista9.innerText = 'Nove'
+    const lista10 = document.createElement('li');
+    listaOrdenada.appendChild(lista10);
+    lista10.innerText = 'Dez'
+
+    const tagMain = document.querySelector('.main-content');
+    const filhosDeMain = tagMain.children
+    for (let index = 0; index < filhosDeMain.length; index += 1) {
+      const createH31 = document.createElement('h3');
+      const createH32 = document.createElement('h3');
+      const createH33 = document.createElement('h3');
+
+      filhosDeMain[index].appendChild(createH31)
+      filhosDeMain[index].appendChild(createH32)
+      filhosDeMain[index].appendChild(createH33)
+      
+    }
+
+    const queryH3 = document.getElementsByTagName('h3');
+    for (let i = 0; i < queryH3.length; i += 1) {
+      queryH3[i].className = 'description'
+    }
+
+
+    const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+    tagMain.removeChild(sectionLeftContent)
+
+
+    const sectionRightContent = document.getElementsByClassName('right-content')[0];
+    sectionRightContent.style.marginRight = 'auto'
+    
+
+
+    const sectionCenterContent = document.getElementsByClassName('center-content')[0];
+    sectionCenterContent.parentNode.style.backgroundColor = 'green';
+    
+  </script>
+</body>
+
+</html>

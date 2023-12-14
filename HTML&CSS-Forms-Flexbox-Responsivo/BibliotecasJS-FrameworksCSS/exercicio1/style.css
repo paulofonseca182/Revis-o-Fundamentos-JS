@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#main-form {
+    background-color: #b5ecb9a3;
+    padding: 20px;
+    width: 40%;
+    border-radius: 8px;
+}
+
+#title {
+    background-color: green;
+    width: 40%;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+} 
+
+#check-box {
+    display: flex;
+    justify-content: space-around;
+}
+
